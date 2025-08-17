@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "./orderbook";
+
+package orderbook;
+
+message Level {
+  double price = 1;
+  double quantity = 2;
+}
+
+// 파일에 저장될 유일한 메시지: 오더북 스냅샷
+message Snapshot {
+  int64 event_time = 1;      // 데이터 수신 시간 (UTC ms)
+  int64 last_update_id = 2;
+  repeated Level bids = 3;
+  repeated Level asks = 4;
+}
