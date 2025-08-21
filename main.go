@@ -153,7 +153,8 @@ func runCollector(fm *FileManager) {
 
 		symbolFromStream := strings.Split(streamEvent.Stream, "@")[0]
 
-		//fmt.Printf("sym(%s) %d\n", symbolFromStream, time.Now().UTC().UnixMilli())
+		fmt.Printf("sym(%s) %d\n", symbolFromStream, time.Now().UTC().UnixMilli())
+
 		// 받은 스냅샷을 Protobuf 메시지로 변환
 		pbSnapshot := &orderbook.Snapshot{
 			EventTime:    time.Now().UTC().UnixMilli(), // 스트림에 타임스탬프가 없으므로 수신 시간 사용
