@@ -39,7 +39,6 @@ func main() {
 
 	for {
 		snapshot, err := readNextSnapshot(file)
-		fmt.Printf("time: %d\n", snapshot.EventTime)
 		if err == io.EOF {
 			break
 		}
