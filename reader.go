@@ -22,7 +22,7 @@ type OrderBook struct {
 
 func main() {
 	symbol := "ETHUSDT"
-	targetTime := time.Date(2025, 8, 17, 5, 13, 6, 0, time.UTC).UnixMilli()
+	targetTime := time.Date(2025, 8, 26, 15, 13, 6, 0, time.UTC).UnixMilli()
 
 	dateStr := time.UnixMilli(targetTime).UTC().Format("2006-01-02")
 	fileName := fmt.Sprintf("data/%s/%s_%s.bin", strings.ToLower(symbol), strings.ToLower(symbol), dateStr)
